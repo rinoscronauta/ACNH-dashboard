@@ -48,14 +48,6 @@ DT::datatable(pic_villagers,
               rownames = FALSE,
               style = "auto")
 
-
-villager <-
-  readr::read_csv(
-    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/villagers.csv'
-  ) %>%
-  select(-row_n) %>%
-  unique()
-
 items <-
   readr::read_csv(
     'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/items.csv'
