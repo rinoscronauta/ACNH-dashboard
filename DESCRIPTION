@@ -27,5 +27,4 @@ Depends:
     viridis,
     scales,
     shinycssloaders,
-    leaflet,
-    leaflet.extras
+    DT
