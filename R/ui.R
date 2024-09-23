@@ -5,14 +5,14 @@ ui = function() {
       title = "ACNH dashboard"
       ,theme =  theme
 
-      ,sidebar =
-        sidebar(
-          position = 'left'
-          ,width = 350
-          # ,module.filter_UI()
-        )
+      # ,sidebar =
+      #   sidebar(
+      #     position = 'left'
+      #     ,width = 350
+      #     # ,module.filter_UI()
+      #   )
 
-      # ,module.dashboard_UI()
+      ,md.dashboard_UI()
 
     )
 }

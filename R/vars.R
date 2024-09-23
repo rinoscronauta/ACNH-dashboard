@@ -1,6 +1,6 @@
 theme = bs_theme( bg = "#fff",
                   fg = "#70C280",
-                  primary = "#9dffb0",
+                  primary = "#70C280",
                   secondary = "#81f1f7",
                   success = "#81f1f7",
                   info = "#c48d3f",

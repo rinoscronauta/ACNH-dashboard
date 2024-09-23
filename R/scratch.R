@@ -34,9 +34,7 @@ pic_villagers <- villagers %>%
     Picture = paste0(
       "<img src=\"",
       Url,
-      "\" height=\"30\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"",
-      Species,
-      "\"></img>"
+      "\" height=\"30\" data-toggle=\"tooltip\" data-placement=\"right\"></img>"
     )
   ) %>%
   select(Picture, Name, Gender, Species, Birthday, Personality) %>%
