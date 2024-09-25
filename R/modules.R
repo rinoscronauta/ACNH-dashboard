@@ -10,11 +10,11 @@ md.dashboard_UI = function(id = 'dashboard'){
         ,full_screen = TRUE
         ,height = '75%'
       )
-      # ,card(
-      #   card_header('Sankey Villagers')
-      #   ,leafletOutput(ns('san.villagers'))
-      #   ,full_screen = TRUE
-      # )
+      ,card(
+        card_header('Sankey Villagers')
+        ,echarts4rOutput(ns('san.villagers'))
+        ,full_screen = TRUE
+      )
     )
   )
 }
@@ -38,18 +38,9 @@ md.dashboard = function(id = 'dashboard', rv){
 
     })
 
-    # output$map.airport = renderLeaflet({
-    #   rv$airports %>%
-    #     leaflet() %>%
-    #     addTiles() %>%
-    #     addMarkers(
-    #       lng = ~lon
-    #       ,lat = ~lat
-    #       ,popup = ~name
-    #       ,clusterOptions = markerClusterOptions(spiderfyOnMaxZoom = TRUE)
-    #       ,options = markerOptions(riseOnHover = TRUE)
-    #     )
-    # })
+    output$san.villagers = renderEcharts4r({
+      rc.villagers()  %>% plot.sankey(coluna_1 = "Gender", coluna_2 = "Personality", coluna_3 = "Species")
+    })
 
   })
 }
